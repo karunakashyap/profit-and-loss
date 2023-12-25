@@ -1,7 +1,10 @@
+import Navigation from './Components/Navigation';
+import './index'
+
 function App() {
   return (
-    <div >
-      
+    <div>
+      <Navigation/>
     </div>
   );
 }
