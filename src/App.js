@@ -1,21 +1,21 @@
-import Delete from './Components/Custom/Buttons/Delete';
-import Edit from './Components/Custom/Buttons/Edit';
-import Position from './Components/Custom/Buttons/Position';
-import ViewDetails from './Components/Custom/Buttons/ViewDetails';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Footer from './Components/Footer';
 import Navigation from './Components/Navigation';
+import BreadCrumbs from './Components/UI/BreadCrumbs/BreadCrumbs';
+import HomePage from './Components/HomePage';
 function App() {
   return (
-    <div>
-      <Navigation/>
-     
-      <Position/>
-      <ViewDetails/>
-      <Edit/>
-      <Footer/>
-      <Delete/>
-     
-    </div>
+    <Router>
+      <div>
+        <Navigation />
+        <Routes>
+          <Route path="/design_guidelines" element={<HomePage />} />
+          <Route path='/overview' element={<BreadCrumbs/>}></Route>
+          <Route path='/overview/payouts' element={<BreadCrumbs/>}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
