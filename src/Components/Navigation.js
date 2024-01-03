@@ -1,6 +1,9 @@
 import { Disclosure, Menu } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Logo from './../assets/pngs/Logo.png'
+import Logo from './../assets/pngs/Logo.png';
+import {ReactComponent as NavCurve} from '../assets/Icons/NavCurve.svg';
+// style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)" }}
+
 
 const navigation = [
   { name: 'Overview', href: '#', current: true },
@@ -17,7 +20,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)" }}>
+    <Disclosure as="nav" className="bg-gray-800 fixed w-full">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" >
@@ -33,6 +36,7 @@ export default function Example() {
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
+                <NavCurve/>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
