@@ -1,11 +1,11 @@
 import React from 'react';
-import {ReactComponent as RigthBig} from '../../../assets/Icons/IconArrow/rightBig.svg'
+import {ReactComponent as RigthBigView} from '../../../assets/Icons/rightBigView.svg'
 
 const ViewDetails = () => {
     return (
-        <div style={{ marginTop: '20px' }}>
-            <button className="bg-red-400 hover:bg-red-500 font-bold-200  py-2 px-4 rounded inline-flex items-center">
-                <RigthBig/>
+        <div >
+            <button className="bg-red-400 mt-6 hover:bg-red-500 font-bold-200  py-2 px-2 rounded inline-flex items-center">
+               <div className=' mr-2'><RigthBigView/></div> 
                 <span className='text-white'>View Details</span>
             </button>
         </div>

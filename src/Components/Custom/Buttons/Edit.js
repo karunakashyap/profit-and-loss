@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ReactComponent as Light} from '../../../assets/Icons/IconEdit/Light.svg';
+import {ReactComponent as LightEdit} from '../../../assets/Icons/LightEdit.svg';
 
 const Edit = () => {
     const [animated,setAnimated]=useState(false);
@@ -10,10 +10,10 @@ const Edit = () => {
         setAnimated(false)
     }
     return (
-        <div style={{ marginTop: '20px' }} onMouseEnter={showText} onMouseLeave={notShowText}>
-            <button className="bg-red-400 hover:bg-red-500 font-bold-200  py-2 px-2 rounded inline-flex items-center">
-                <Light />
-                {animated && <span className='text-white'>Edit</span>}
+        <div  onMouseEnter={showText} onMouseLeave={notShowText}>
+            <button className="bg-red-400 mt-6 hover:bg-red-500 font-bold-200  py-2 px-2 rounded inline-flex items-center">
+                <LightEdit />
+                {animated && <span className='text-white ml-1'>Edit</span>}
             </button>
         </div>
     )

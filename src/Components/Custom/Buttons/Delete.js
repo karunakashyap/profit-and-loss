@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {ReactComponent as White} from '../../../assets/Icons/IconDelete/White.svg';
+import {ReactComponent as WhiteDelete} from '../../../assets/Icons/WhiteDelete.svg';
 const Delete = () => {
     const [animated,setAnimated]=useState(false);
     const showText=()=>{
@@ -10,12 +10,11 @@ const Delete = () => {
     }
 
     return ( 
-        <div style={{ marginTop: '20px' }} onMouseEnter={showText} onMouseLeave={notShowText}>
-            <button className="bg-red-400 hover:bg-red-500 font-bold-200  py-2 px-2 rounded inline-flex items-center">
-                <White />
+        <div  onMouseEnter={showText} onMouseLeave={notShowText}>
+            <button className="bg-red-400 mt-6 hover:bg-red-500 font-bold-200  py-2 px-2 rounded inline-flex items-center">
+                <WhiteDelete />
                 {animated && 
-                <span className='text-white'>Delete</span>
-}
+                <span className='text-white ml-1'>Delete</span>}
             </button>
         </div>
     )
