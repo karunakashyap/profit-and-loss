@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as MenuBar } from '../../../assets/Icons/menubar.svg';
+import { ReactComponent as MenuBar } from '../../../assets/Icons/Menubar.svg';
 import { ReactComponent as ChevronUp } from '../../../assets/Icons/ChevronUp.svg';
 
 

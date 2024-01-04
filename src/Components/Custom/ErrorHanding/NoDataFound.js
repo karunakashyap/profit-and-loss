@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as WarningBlack } from '../../../assets/Icons/warningBlack.svg';
+import { ReactComponent as WarningBlack } from '../../../assets/Icons/WarningBlack.svg';
 
 const NoDataFound = () => {
     return (

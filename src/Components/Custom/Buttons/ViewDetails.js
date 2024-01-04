@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as RigthBigView} from '../../../assets/Icons/rightBigView.svg'
+import {ReactComponent as RigthBigView} from '../../../assets/Icons/RightBigView.svg'
 
 const ViewDetails = () => {
     return (
