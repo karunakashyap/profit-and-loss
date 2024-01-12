@@ -1,17 +1,17 @@
 import React from 'react'
-import {ReactComponent as ExclamationCircle} from '../../../assets/Icons/ExclamationCircle.svg';
+import { ReactComponent as ExclamationCircle } from '../../../assets/Icons/ExclamationCircle.svg';
 
-const FormInput = () => {
+const FormInput = ({ titleName, fontSize, type, source, value }) => {
     return (
         <div>
-           <form action="">
-                <div class="flex flex-col items-center mt-4">
-                   <div className='flex mr-24 space-x-1'><label for="name" className=' text-gray-400  mb-2'>Payout Structure Name</label>
-                    <div className=''><ExclamationCircle/></div></div> 
-                    <input type="text" name="name" id="name" placeholder='Enter Structures Name' required class="peer p-2 border rounded py-2 px-4 w-72 text-gray-400 border-r-4 " />
-                    <i class="invisible peer-invalid:visible text-red-700 font-light  mr-20 mb-2">
-                        Please Enter Structure Name
-                    </i>
+            <form action="">
+                <div class="grid grid-cols-2">
+                    <div><div className='flex space-x-1 mt-1'><label for="name" className={` text-gray-400 mb-2  text-${fontSize}`}>{titleName}</label>
+                        <div className=' mt-1'><ExclamationCircle /></div></div></div>
+                    <div><div className='relative right-4'> {source == "input" ?
+                        <input type={type} name="number" id="number" step=".0" placeholder='Type Here...' required class="p-2 border rounded py-2 px-4 w-72 text-gray-400" />
+                        : <input type={type} value={value} name="number" id="number" step=".0" disabled placeholder='Type Here...' required class="p-2 border rounded py-2 px-4 w-72 text-gray-400" />
+                    }</div></div>
                 </div>
             </form>
         </div>
