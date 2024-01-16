@@ -18,7 +18,7 @@ const Tooltip = ({ label }) => {
                 <div onMouseEnter={showToolTip} onMouseLeave={notShowTooltip}>
                     <label
                         className="block text-gray-500 text-sm  mb-2 relative right-12"
-                        for="username"
+                        htmlFor="username"
                     >
                         {label}
                     </label>

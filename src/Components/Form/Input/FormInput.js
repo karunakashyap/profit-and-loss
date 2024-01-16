@@ -5,16 +5,16 @@ const FormInput = ({ titleName, fontSize, type, source, value }) => {
     return (
         <div className="p-2">
             <form action="">
-                <div class="grid grid-cols-2 mt-1">
+                <div className="grid grid-cols-2 mt-1">
                     <div className="w-[200px]">
                         <div className="flex space-x-1 mt-1">
                             <label
-                                for="name"
+                                htmlFor="name"
                                 className={`text-gray-400 mb-2`}
                                 style={{ fontSize: fontSize }}
                             >
                                 {titleName}&nbsp;
-                                <ExclamationCircle class="inline" />
+                                <ExclamationCircle className="inline" />
                             </label>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ const FormInput = ({ titleName, fontSize, type, source, value }) => {
                                 disabled={source !== 'INPUT' ? true : false}
                                 placeholder="Type Here..."
                                 required
-                                class="p-2 border rounded py-2 px-4 w-72 text-gray-400"
+                                className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
                             />
                         </div>
                     </div>

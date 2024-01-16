@@ -32,7 +32,7 @@ const AutoComplete = () => {
                     isMulti
                 />
             </div>
-            <i class="invisible peer-invalid:visible text-red-700 font-light  mr-20 mb-2">
+            <i className="invisible peer-invalid:visible text-red-700 font-light  mr-20 mb-2">
                 Please Enter Structure Name
             </i>
         </div>

@@ -32,10 +32,17 @@ const PnlForm = () => {
     if (!data) return null;
 
     return (
-        <div className="border-2 p-4 w-[700px] ml-[500px] mb-32">
+        <div 
+            className="border-2 p-4 w-[700px] mb-32"
+            style={{
+                'transform': 'translate(-50%)',
+                'position': 'absolute',
+                'left': '50%'
+            }}
+        >
             <div>
                 {data.map((field, index) => {
-                    return <SubFieldSection field={field} index={index} />;
+                    return <SubFieldSection field={field} index={index} key={field.sequence + index} />;
                 })}
             </div>
         </div>
