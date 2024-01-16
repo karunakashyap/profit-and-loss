@@ -1,10 +1,5 @@
 import React from 'react';
 import { ReactComponent as MenuBar } from '../../../assets/Icons/Menubar.svg';
-import { ReactComponent as ChevronUp } from '../../../assets/Icons/ChevronUp.svg';
-import { ReactComponent as ChevronDown } from '../../../assets/Icons/ChevronDown.svg';
-
-
-
 const HeaderSection = ({ title, showJsonData, chevron }) => {
     return (
         <div>

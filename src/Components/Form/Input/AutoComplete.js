@@ -15,8 +15,8 @@ const AutoComplete = () => {
         setSelectedOptions(data);
     }
     return (
-        <div className="mb-40">
-            <div className=' flex text-gray-400 space-x-2'><h2>Job Tittle</h2><ExclamationCircle /></div>
+        <div className="flex flex-col justify-center items-center">
+            <div className=' flex  text-gray-400 space-x-1 mr-44'><h2>Job Tittle</h2><ExclamationCircle /></div>
             <div className="dropdown-container w-72 mt-2">
                 <Select 
                    className='peer'

@@ -9,17 +9,16 @@ import { ReactComponent as CroseWhite } from '../assets/Icons/CroseWhite.svg'
 import Tooltip from './UI/Tooltip/Tooltip'
 import NoDataFound from './Custom/ErrorHanding/NoDataFound'
 import HeaderSection from './UI/HeaderSection/HeaderSection'
-
 const HomePage = () => {
   return (
     <>
-      <div className=' text-center'>
+      <div className='text-center'>
         <h1 className='relative top-20 font-bold text-4xl'>Buttons</h1>
         <Position />
         <ViewDetails />
         <Delete />
         <Edit />
-        <h1 className=' font-bold text-4xl mt-5'>BreadCrumbs</h1>
+        <h1 className=' font-bold text-4xl'>BreadCrumbs</h1>
         <BreadCrumbs />
         <h1 className=' font-bold text-4xl mt-5'>Tooltips</h1>
         <Tooltip label={'Type Structure Name'} />
@@ -33,10 +32,13 @@ const HomePage = () => {
         <h1 className=' font-bold text-4xl mt-5'>Header Section</h1>
       </div>
       <HeaderSection />
-      <h1 className=' font-bold text-4xl mt-5 text-center'>No Data Found</h1>
-      <div className=' mb-28 flex items-center justify-center'>
+
+      <h1 className='font-bold text-4xl mt-5 text-center'>No Data Found</h1>
+      <div className='flex items-center justify-center'>
         <NoDataFound />
       </div>
+      <h1 className='font-bold text-4xl mt-5 text-center'>Form Input</h1>
+
     </>
 
   )
