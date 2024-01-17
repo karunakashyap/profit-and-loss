@@ -4,12 +4,16 @@ import { ReactComponent as ChevronRight } from '../../../assets/Icons/ChevronRig
 
 const Breadcrumbs = () => {
     const location = useLocation();
-    const currentUrl = location.pathname.split('/').filter((x) => x);
+    const capitalize = (string) => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '');
+    const currentUrl = location.pathname
+        .split('/')
+        .map((el) => capitalize(el))
+        .filter((x) => x);
     return (
-        <div className="flex text-gray-500 text-lg justify-center mt-5">
-            <Link to="/">overview</Link>
+        <div className="flex text-gray-500 text-lg p-5">
+            <Link to="/">Overview</Link>
             {currentUrl.map((pathname, index) => {
-                console.log(`/${currentUrl.slice(0, index + 1)}`);
+                // console.log(`/${currentUrl.slice(0, index + 1)}`);
                 const routeTo = `/${currentUrl.slice(0, index + 1).join('/')}`;
                 const isLast = index === currentUrl.length - 1;
                 return (

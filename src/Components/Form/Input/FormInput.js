@@ -1,7 +1,16 @@
 import React from 'react';
 import { ReactComponent as ExclamationCircle } from '../../../assets/Icons/ExclamationCircle.svg';
 
-const FormInput = ({ titleName, fontSize, type, source, value }) => {
+const FormInput = ({
+    titleName,
+    fontSize,
+    type,
+    source,
+    value,
+    formFieldId,
+    onFormFieldBlur,
+    monthlyConstantEnable,
+}) => {
     return (
         <div className="p-2">
             <form action="">
@@ -9,7 +18,7 @@ const FormInput = ({ titleName, fontSize, type, source, value }) => {
                     <div className="w-[200px]">
                         <div className="flex space-x-1 mt-1">
                             <label
-                                htmlFor="name"
+                                htmlFor={formFieldId}
                                 className={`text-gray-400 mb-2`}
                                 style={{ fontSize: fontSize }}
                             >
@@ -22,14 +31,19 @@ const FormInput = ({ titleName, fontSize, type, source, value }) => {
                         <div className="relative">
                             <input
                                 type={type}
-                                value={value}
-                                name="number"
-                                id="number"
-                                step=".0"
-                                disabled={source !== 'INPUT' ? true : false}
+                                defaultValue={value || 0}
+                                id={formFieldId}
+                                step={type !== 'DECIMAL' ? '1' : '.2'}
+                                disabled={
+                                    source == 'MONTHLY_CONSTANT' && monthlyConstantEnable
+                                        ? false
+                                        : source !== 'INPUT'
+                                          ? true
+                                          : false
+                                }
                                 placeholder="Type Here..."
-                                required
                                 className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
+                                onBlur={onFormFieldBlur}
                             />
                         </div>
                     </div>

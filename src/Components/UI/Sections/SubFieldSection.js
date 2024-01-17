@@ -4,10 +4,16 @@ import HeaderSection from './HeaderSection';
 import { ReactComponent as ChevronUp } from '../../../assets/Icons/ChevronUp.svg';
 import { ReactComponent as ChevronDown } from '../../../assets/Icons/ChevronDown.svg';
 
-const SubFieldSection = ({ field, index, fontSize = 20 }) => {
-    const [showSectionData, setShowSectionData] = useState(false);
-    const showSection = (indexValue) =>
-        setShowSectionData(indexValue === showSectionData ? null : indexValue);
+const SubFieldSection = ({
+    field,
+    index,
+    fontSize = 20,
+    onFormFieldBlur,
+    monthlyConstantEnable,
+}) => {
+    const [hideSectionIndex, setHideSectionData] = useState(false);
+    const hideSection = (indexValue) =>
+        setHideSectionData(indexValue === hideSectionIndex ? null : indexValue);
 
     fontSize = fontSize < 14 ? 14 : fontSize;
 
@@ -19,9 +25,9 @@ const SubFieldSection = ({ field, index, fontSize = 20 }) => {
                         <div>
                             <HeaderSection
                                 chevron={
-                                    showSectionData === index ? <ChevronUp /> : <ChevronDown />
+                                    hideSectionIndex === index ? <ChevronUp /> : <ChevronDown />
                                 }
-                                showSection={() => showSection(index)}
+                                hideSection={() => hideSection(index)}
                                 title={field?.title}
                                 fontSize={fontSize}
                             />
@@ -29,9 +35,13 @@ const SubFieldSection = ({ field, index, fontSize = 20 }) => {
                     );
                 }
             })()}
-            {showSectionData === index && (
-                <div>
-                    <div className="mt-10">
+            {
+                <div
+                    style={{
+                        display: hideSectionIndex === index ? 'none' : 'block',
+                    }}
+                >
+                    <div className="mt-5">
                         {field?.sub_fields.map((field, index) => {
                             return (
                                 <SubFieldSection
@@ -39,6 +49,8 @@ const SubFieldSection = ({ field, index, fontSize = 20 }) => {
                                     index={index}
                                     key={field.sequence + index}
                                     fontSize={fontSize - 2}
+                                    onFormFieldBlur={onFormFieldBlur}
+                                    monthlyConstantEnable={monthlyConstantEnable}
                                 />
                             );
                         })}
@@ -52,12 +64,15 @@ const SubFieldSection = ({ field, index, fontSize = 20 }) => {
                                     source={formField.source}
                                     value={formField.value}
                                     fontSize={fontSize}
+                                    formFieldId={formField?.form_field_id}
+                                    onFormFieldBlur={onFormFieldBlur}
+                                    monthlyConstantEnable={monthlyConstantEnable}
                                 />
                             </div>
                         );
                     })}
                 </div>
-            )}
+            }
         </div>
     );
 };

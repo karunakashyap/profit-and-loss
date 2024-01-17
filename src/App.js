@@ -5,7 +5,7 @@ import HomePage from './Components/HomePage';
 import PnlForm from './Pages/PnlForm';
 import React from '@heroicons/react';
 import PnlMonthlyConstant from './Pages/PnlMonthlyConstant';
-import monthlyConstant from './assets/Jsons/MonthlyConstant.json';
+
 function App() {
     return (
         <Router>
@@ -13,14 +13,10 @@ function App() {
                 <Navigation />
                 <Routes>
                     <Route path="/design_guidelines" element={<HomePage />} />
-                    <Route path="/form_field/monthly_input" element={<PnlForm />} />
+                    <Route path="/pnl/2024/January" element={<PnlForm />} />
                     <Route
-                        path="/monthly_constants"
-                        element={
-                            <div className="border-2 p-4 w-[700px] ml-[500px] mb-32">
-                                <PnlMonthlyConstant monthlyConstant={monthlyConstant} />
-                            </div>
-                        }
+                        path="/monthly_constants/2024/January"
+                        element={<PnlMonthlyConstant />}
                     />
                 </Routes>
                 <Footer />

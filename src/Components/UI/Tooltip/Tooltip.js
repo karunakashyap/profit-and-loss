@@ -23,6 +23,7 @@ const Tooltip = ({ label }) => {
                         {label}
                     </label>
                     <input
+                        id="username"
                         type="text"
                         placeholder="Type Structure Name"
                         className="border border-r-2 rounded py-2 px-4 w-64 text-gray-700"

@@ -1,66 +1,130 @@
-import React, { useState } from 'react';
-import FormInput from '../Components/Form/Input/FormInput';
-import HeaderSection from '../Components/UI/Sections/HeaderSection';
-import { ReactComponent as ChevronDown } from '../assets/Icons/ChevronDown.svg';
-import { ReactComponent as ChevronUp } from '../assets/Icons/ChevronUp.svg';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import SubFieldSection from '../Components/UI/Sections/SubFieldSection';
+import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
 
-const PnlMonthlyConstant = ({ monthlyConstant }) => {
-    const [showDownData, setShowDownData] = useState(null);
-    const showSection = (indexValue) => {
-        setShowDownData(indexValue === showDownData ? null : indexValue);
+const PnlMonthlyConstant = () => {
+    const [formFields, setFormFields] = useState([]);
+    const [rerender, setRerender] = useState(true);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        console.log('formFields==>', formFields);
+    }, [formFields]);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios({
+                method: 'GET',
+                url: 'http://localhost:4000/pnl/fields/monthly_constants?month=1&year=2024',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-type': 'application/json',
+                },
+                data: {},
+                crossDomain: true,
+            });
+            setFormFields([...response.data.data]);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     };
+
+    const getAllFormFields = (obj, aggregator = []) => {
+        if (obj && obj?.length > 0) {
+            for (const field of obj) {
+                if (field?.sub_fields?.length > 0) {
+                    aggregator = getAllFormFields(field?.sub_fields, aggregator);
+                }
+
+                if (field?.form_fields?.length > 0) {
+                    aggregator = [...aggregator, ...field.form_fields];
+                }
+            }
+        }
+
+        return aggregator;
+    };
+
+    const allFormFields = getAllFormFields(formFields);
+    const year = 2024;
+    const month = 1;
+
+    const submitPnl = async (event) => {
+        try {
+            const postBody = {
+                year,
+                month,
+                status: 'DRAFT',
+                fields: [],
+            };
+
+            for (let field of allFormFields) {
+                let formFieldElement = document.getElementById(field?.form_field_id);
+                if (formFieldElement.type?.toLowerCase() == 'number') {
+                    field.value = parseInt(formFieldElement.value);
+                } else if (formFieldElement.type?.toLowerCase() == 'decimal') {
+                    field.value = parseFloat(formFieldElement.value);
+                } else {
+                    field.value = formFieldElement.value;
+                }
+                postBody?.fields.push(field);
+            }
+
+            const response = await axios({
+                method: 'POST',
+                url: 'http://localhost:4000/pnl',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-type': 'application/json',
+                },
+                data: postBody,
+                crossDomain: true,
+            });
+            setFormFields([...response.data.data]);
+            setRerender(false);
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, 100);
+            });
+            setRerender(true);
+            console.log('Updated formFields', formFields);
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    };
+
+    if (!formFields) return null;
+
     return (
         <div>
-            {monthlyConstant.map((field, index) => {
-                console.log(field);
-                return (
-                    <div>
-                        {(() => {
-                            if (field.title != null) {
-                                return (
-                                    <div>
-                                        <HeaderSection
-                                            chevron={
-                                                showDownData === index ? (
-                                                    <ChevronUp />
-                                                ) : (
-                                                    <ChevronDown />
-                                                )
-                                            }
-                                            showSection={() => showSection(index)}
-                                            title={field?.title}
-                                        />
-                                    </div>
-                                );
-                            }
-                        })()}
-
-                        {showDownData === index && (
-                            <div>
-                                {field?.form_fields?.map((formField, index) => {
-                                    console.log(formField);
-                                    return (
-                                        <div className=" mt-2">
-                                            <FormInput
-                                                titleName={formField?.element_name}
-                                                type={formField.data_type}
-                                                source={formField.source}
-                                                value={formField.value}
-                                            />
-                                        </div>
-                                    );
-                                })}
-                                <div className=" mt-10">
-                                    {' '}
-                                    {field.sub_fields && (
-                                        <PnlMonthlyConstant monthlyConstant={field.sub_fields} />
-                                    )}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                );
-            })}
+            <BreadCrumbs></BreadCrumbs>
+            {rerender && (
+                <div
+                    className="border-2 p-4 w-[700px] mb-32"
+                    style={{
+                        transform: 'translate(-50%)',
+                        position: 'absolute',
+                        left: '50%',
+                    }}
+                >
+                    {formFields.map((field, index) => {
+                        return (
+                            <SubFieldSection
+                                field={field}
+                                index={index}
+                                key={field.sequence + index}
+                                onFormFieldBlur={submitPnl}
+                                monthlyConstantEnable={true}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 };
