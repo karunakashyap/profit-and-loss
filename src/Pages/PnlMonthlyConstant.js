@@ -53,7 +53,7 @@ const PnlMonthlyConstant = () => {
     const year = 2024;
     const month = 1;
 
-    const submitPnl = async (event) => {
+    const submitPnlMonthlyConstants = async (event) => {
         try {
             const postBody = {
                 year,
@@ -74,9 +74,11 @@ const PnlMonthlyConstant = () => {
                 postBody?.fields.push(field);
             }
 
+            console.log('postBody==>', JSON.stringify(postBody));
+
             const response = await axios({
                 method: 'POST',
-                url: 'http://localhost:4000/pnl',
+                url: 'http://localhost:4000/pnl/monthly-constants',
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Content-type': 'application/json',
@@ -118,7 +120,7 @@ const PnlMonthlyConstant = () => {
                                 field={field}
                                 index={index}
                                 key={field.sequence + index}
-                                onFormFieldBlur={submitPnl}
+                                onFormFieldBlur={submitPnlMonthlyConstants}
                                 monthlyConstantEnable={true}
                             />
                         );
