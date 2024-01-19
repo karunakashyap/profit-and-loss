@@ -24,8 +24,16 @@ const FormInput = ({
             setNumericValue(filterNum(event.target.value));
         }
     };
+
+    const checkSpecialChar =(e)=>{
+        if(!/[0-9a-zA-Z]/.test(e.key)){
+         e.preventDefault();
+        }
+       };
+      
     console.log('Title Name==>', titleName);
     console.log('value==>', value);
+    console.log('type==>', type);
     console.log('numericValue==>', numericValue);
 
     return (
@@ -47,24 +55,65 @@ const FormInput = ({
                     </div>
                     <div>
                         <div className="relative">
-                            <CurrencyInput
-                                allowDecimals
-                                prefix="₹"
-                                value={numericValue}
-                                name={`${formFieldId}_${titleName}`}
-                                id={formFieldId}
-                                onChange={handleChange}
-                                step={type !== 'DECIMAL' ? '1' : '.2'}
-                                disabled={
-                                    source == 'MONTHLY_CONSTANT' && monthlyConstantEnable
-                                        ? false
-                                        : source !== 'INPUT'
-                                          ? true
-                                          : false
-                                }
-                                className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
-                                onBlur={onFormFieldBlur}
-                            />
+                            {
+                                type === 'currency' && <CurrencyInput
+                                    allowDecimals
+                                    value={numericValue}
+                                    prefix="₹ "
+                                    name={`${formFieldId}_${titleName}`}
+                                    id={formFieldId}
+                                    onChange={handleChange}
+                                    step={type !== 'decimal' ? '1' : '.2'}
+                                    disabled={
+                                        source === 'MONTHLY_CONSTANT' && monthlyConstantEnable
+                                            ? false
+                                            : source !== 'INPUT'
+                                            ? true
+                                            : false
+                                    }
+                                    className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
+                                    onBlur={onFormFieldBlur}
+                                />
+                            }
+                            {
+                                type === 'number' && <input
+                                    allowDecimals
+                                    value={numericValue}
+                                    name={`${formFieldId}_${titleName}`}
+                                    id={formFieldId}
+                                    onChange={handleChange}
+                                    disabled={
+                                        source === 'MONTHLY_CONSTANT' && monthlyConstantEnable
+                                            ? false
+                                            : source !== 'INPUT'
+                                            ? true
+                                            : false
+                                    }
+                                    className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
+                                    onBlur={onFormFieldBlur}
+                                    onKeyDown={checkSpecialChar}
+                                />
+                            }
+                            {
+                                type === 'decimal' && <input
+                                    allowDecimals
+                                    value={numericValue}
+                                    name={`${formFieldId}_${titleName}`}
+                                    id={formFieldId}
+                                    step='0.2'
+                                    onChange={handleChange}
+                                    disabled={
+                                        source === 'MONTHLY_CONSTANT' && monthlyConstantEnable
+                                            ? false
+                                            : source !== 'INPUT'
+                                            ? true
+                                            : false
+                                    }
+                                    className="p-2 border rounded py-2 px-4 w-72 text-gray-400"
+                                    onBlur={onFormFieldBlur}
+                                    onKeyDown={checkSpecialChar}
+                                />
+                            }
                         </div>
                     </div>
                 </div>

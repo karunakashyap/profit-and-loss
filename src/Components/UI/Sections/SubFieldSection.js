@@ -60,9 +60,9 @@ const SubFieldSection = ({
                             <div className="mt-2" key={formField?.form_field_id}>
                                 <FormInput
                                     titleName={formField?.element_name}
-                                    type={formField.data_type}
-                                    source={formField.source}
-                                    value={formField.value}
+                                    type={formField?.data_type?.toLowerCase()}
+                                    source={formField?.source}
+                                    value={formField?.value}
                                     fontSize={fontSize}
                                     formFieldId={formField?.form_field_id}
                                     onFormFieldBlur={onFormFieldBlur}
