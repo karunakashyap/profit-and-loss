@@ -65,7 +65,7 @@ const PnlForm = () => {
 
             for (let field of allFormFields) {
                 let formFieldElement = document.getElementById(field?.form_field_id);
-                console.log('field.data_type==>', field.data_type)
+                console.log('field.data_type==>', field.data_type);
                 if (field.data_type?.toLowerCase() == 'number') {
                     field.value = parseInt(filterNum(formFieldElement.value));
                 } else if (field.data_type?.toLowerCase() == 'decimal') {

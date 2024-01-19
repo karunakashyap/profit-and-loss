@@ -7,4 +7,4 @@ const filterNum = (str) => {
     return str;
 };
 
-module.exports = filterNum
+module.exports = filterNum;

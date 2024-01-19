@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-const Toast = ({ toastBgColor, croseIcon, toastWidth, toastButton, toastButtonBg ,disableAnimation}) => {
+const Toast = ({
+    toastBgColor,
+    croseIcon,
+    toastWidth,
+    toastButton,
+    toastButtonBg,
+    disableAnimation,
+}) => {
     const [toast, setToast] = useState(true);
     const [showDiv, setShowDiv] = useState(true);
     const notShowToast = () => {
@@ -7,12 +14,11 @@ const Toast = ({ toastBgColor, croseIcon, toastWidth, toastButton, toastButtonBg
     };
 
     useEffect(() => {
-        if(!disableAnimation){
-
-        
-        setTimeout(() => {
-            setShowDiv(false);
-        },10000);}
+        if (!disableAnimation) {
+            setTimeout(() => {
+                setShowDiv(false);
+            }, 10000);
+        }
     }, []);
 
     return (

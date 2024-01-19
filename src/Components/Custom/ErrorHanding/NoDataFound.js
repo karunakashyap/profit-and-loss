@@ -3,7 +3,7 @@ import { ReactComponent as WarningBlack } from '../../../assets/Icons/WarningBla
 
 const NoDataFound = () => {
     return (
-        <div className=' mb-6'>
+        <div className=" mb-6">
             <div className=" w-[700px] bg-gray-100 border flex rounded  p-2 mt-6">
                 <div className=" mt-[2px]">
                     <WarningBlack />
