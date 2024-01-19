@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import SubFieldSection from '../Components/UI/Sections/SubFieldSection';
 import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
+const filterNum = require('../Helpers/filterNumber');
 
 const PnlMonthlyConstant = () => {
     const [formFields, setFormFields] = useState([]);
@@ -64,10 +65,11 @@ const PnlMonthlyConstant = () => {
 
             for (let field of allFormFields) {
                 let formFieldElement = document.getElementById(field?.form_field_id);
-                if (formFieldElement.type?.toLowerCase() == 'number') {
-                    field.value = parseInt(formFieldElement.value);
-                } else if (formFieldElement.type?.toLowerCase() == 'decimal') {
-                    field.value = parseFloat(formFieldElement.value);
+                console.log('field.data_type==>', field.data_type)
+                if (field.data_type?.toLowerCase() == 'number') {
+                    field.value = parseInt(filterNum(formFieldElement.value));
+                } else if (field.data_type?.toLowerCase() == 'decimal') {
+                    field.value = parseFloat(filterNum(formFieldElement.value));
                 } else {
                     field.value = formFieldElement.value;
                 }
