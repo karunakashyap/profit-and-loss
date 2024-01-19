@@ -11,13 +11,13 @@ const Tooltip = ({ label }) => {
         <div className=" mt-4">
             <div className="relative">
                 {tooltip && (
-                    <span className="absolute bottom-7 left-30 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                    <span className="absolute bottom-7 left-[120px] transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
                         Lorem Ipsum Dolor Aset
                     </span>
                 )}
                 <div onMouseEnter={showToolTip} onMouseLeave={notShowTooltip}>
                     <label
-                        className="block text-gray-500 text-sm  mb-2 relative right-12"
+                        className="block text-gray-500 text-sm  mb-2 relative "
                         htmlFor="username"
                     >
                         {label}
