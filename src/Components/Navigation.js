@@ -1,6 +1,6 @@
 import { Disclosure, Menu } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Logo from './../assets/pngs/Logo.png';
+import Logo from './../assets/Pngs/Logo.png';
 // style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)" }}
 
 const navigation = [
