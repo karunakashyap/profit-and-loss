@@ -10,8 +10,8 @@ import { ReactComponent as ChevronDown } from '../assets/Icons/ChevronDown.svg';
 import Tooltip from './UI/Tooltip/Tooltip';
 import NoDataFound from './Custom/ErrorHanding/NoDataFound';
 import HeaderSection from './UI/Sections/HeaderSection';
-import PnlForm from '../Pages/PnlForm';
 import FormInput from './Form/Input/FormInput';
+import MonthlyChats from './UI/Chats/MonthlyChats';
 const HomePage = () => {
     return (
         <>
@@ -111,6 +111,8 @@ const HomePage = () => {
                 <div>
                     <NoDataFound />
                 </div>
+                <h1 className="font-bold text-4xl">Charts</h1>
+               <MonthlyChats/>
             </div>
         </>
     );
