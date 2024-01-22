@@ -12,6 +12,8 @@ import NoDataFound from './Custom/ErrorHanding/NoDataFound';
 import HeaderSection from './UI/Sections/HeaderSection';
 import FormInput from './Form/Input/FormInput';
 import MonthlyChats from './UI/Chats/MonthlyChats';
+import QuaterlyChart from './UI/Chats/QuaterlyChart';
+import PieChart from './UI/Chats/RevenueChart';
 const HomePage = () => {
     return (
         <>
@@ -113,6 +115,8 @@ const HomePage = () => {
                 </div>
                 <h1 className="font-bold text-4xl">Charts</h1>
                <MonthlyChats/>
+               <QuaterlyChart/>
+               <PieChart/>
             </div>
         </>
     );
