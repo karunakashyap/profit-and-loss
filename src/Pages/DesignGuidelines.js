@@ -1,20 +1,17 @@
 import React from 'react';
-import Position from './Custom/Buttons/Position';
-import ViewDetails from './Custom/Buttons/ViewDetails';
-import Delete from './Custom/Buttons/Delete';
-import Edit from './Custom/Buttons/Edit';
-import BreadCrumbs from './UI/BreadCrumbs/BreadCrumbs';
-import Toast from './UI/Toast/Toast';
+import Position from '../Components/Custom/Buttons/Position';
+import ViewDetails from '../Components/Custom/Buttons/ViewDetails';
+import Delete from '../Components/Custom/Buttons/Delete';
+import Edit from '../Components/Custom/Buttons/Edit';
+import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
+import Toast from '../Components/UI/Toast/Toast';
 import { ReactComponent as CroseWhite } from '../assets/Icons/CroseWhite.svg';
 import { ReactComponent as ChevronDown } from '../assets/Icons/ChevronDown.svg';
-import Tooltip from './UI/Tooltip/Tooltip';
-import NoDataFound from './Custom/ErrorHanding/NoDataFound';
-import HeaderSection from './UI/Sections/HeaderSection';
-import FormInput from './Form/Input/FormInput';
-import MonthlyChats from './UI/Chats/MonthlyChats';
-import QuaterlyChart from './UI/Chats/QuaterlyChart';
-import PieChart from './UI/Chats/RevenueChart';
-const HomePage = () => {
+import Tooltip from '../Components/UI/Tooltip/Tooltip';
+import NoDataFound from '../Components/Custom/ErrorHanding/NoDataFound';
+import HeaderSection from '../Components/UI/Sections/HeaderSection';
+import FormInput from '../Components/Form/Input/FormInput';
+const DesignGuidelines = () => {
     return (
         <>
             <div className="p-20">
@@ -113,13 +110,10 @@ const HomePage = () => {
                 <div>
                     <NoDataFound />
                 </div>
-                <h1 className="font-bold text-4xl">Charts</h1>
-               <MonthlyChats/>
-               <QuaterlyChart/>
-               <PieChart/>
+                
             </div>
         </>
     );
 };
 
-export default HomePage;
+export default DesignGuidelines;
