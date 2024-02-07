@@ -1,9 +1,11 @@
-import React from 'react';
+import Loader from "react-js-loader";
 
-function Loading() {
+const Loading = () => {
     return (
-        <div className="loader-container">
-            <div className="loader">Loading...</div>
+        <div className="w-full h-full" style={{
+            paddingTop: '200px'
+        }}>
+            <Loader type="box-rotate-x" bgColor={"#1f2937"} color={"#1f2937"} title={"Loading..."} size={100} />
         </div>
     );
 }

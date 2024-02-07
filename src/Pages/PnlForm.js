@@ -7,11 +7,32 @@ const filterNum = require('../Helpers/FilterNumber');
 
 const PnlForm = () => {
     const [formFields, setFormFields] = useState([]);
-    const [isLoading, setLoading] = useState(false);
+    const [isLoading, setLoading] = useState(true);
+    const [focusOnNextElementId, setFocussedElementId] = useState(null)
+
     useEffect(() => {
         console.log('API Call Happening');
         fetchData();
     }, []);
+
+    useEffect(() => {
+        if (focusOnNextElementId) {
+            const formFieldElements = document.querySelectorAll('[id^="formfield_"]');
+            let catchNext = false;
+            for (const formFieldElement of formFieldElements) {
+                if (catchNext) {
+                    console.log(formFieldElement);
+                    formFieldElement.focus();
+                    formFieldElement.scrollIntoView({ behavior: 'smooth' });
+                    break;
+                }
+                if (formFieldElement?.id === focusOnNextElementId) {
+                    catchNext = true;
+                }
+            }
+        }
+    }, [focusOnNextElementId]);
+
 
     const fetchData = async () => {
         try {
@@ -51,10 +72,12 @@ const PnlForm = () => {
     const allFormFields = getAllFormFields(formFields);
     console.log('allFormFields==>', allFormFields);
     const year = 2024;
-    const month = 1;
+    const month = 2;
 
     const submitPnl = async (event) => {
         try {
+            const formFieldId = event.currentTarget.id;
+            setFocussedElementId(null);
             console.log('submitPnl, Invoked...');
             const postBody = {
                 year,
@@ -64,7 +87,7 @@ const PnlForm = () => {
             };
 
             for (let field of allFormFields) {
-                let formFieldElement = document.getElementById(field?.form_field_id);
+                let formFieldElement = document.getElementById("formfield_" + field?.form_field_id);
                 if (field.data_type?.toLowerCase() === 'currency') {
                     field.value = parseInt(filterNum(formFieldElement.value));
                 } else if (field.data_type?.toLowerCase() === 'number') {
@@ -90,6 +113,7 @@ const PnlForm = () => {
             });
             setFormFields((formFields) => [...response.data.data]);
             setLoading(false);
+            setFocussedElementId(formFieldId);
             console.log('Updated formFields', formFields);
         } catch (error) {
             console.error('Error submitting data:', error);
@@ -98,7 +122,9 @@ const PnlForm = () => {
 
     if (!formFields) return null;
 
-    if (isLoading) return Loader;
+    if (isLoading) return (
+        <Loader/>
+    );
 
     return (
         <div>

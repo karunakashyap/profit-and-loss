@@ -17,7 +17,6 @@ const FormInput = ({
     const [numericValue, setNumericValue] = useState(value);
 
     const handleChange = (event) => {
-        console.log('onValueChange fired', event.target.value);
         if (event.target.value === undefined) {
             setNumericValue(0);
         } else {
@@ -55,7 +54,7 @@ const FormInput = ({
                                     value={numericValue}
                                     prefix="₹ "
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     onChange={handleChange}
                                     step={type !== 'decimal' ? '1' : '.2'}
                                     disabled={
@@ -75,7 +74,7 @@ const FormInput = ({
                                     allowDecimals
                                     value={numericValue}
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     onChange={handleChange}
                                     disabled={
                                         source === 'MONTHLY_CONSTANT' && monthlyConstantEnable
@@ -94,7 +93,7 @@ const FormInput = ({
                                     allowDecimals
                                     value={numericValue}
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     decimalsLimit={2}
                                     fixedDecimalLength={2}
                                     decimalScale={2}
