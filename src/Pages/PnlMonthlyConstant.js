@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import SubFieldSection from '../Components/UI/Sections/SubFieldSection';
 import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
-const filterNum = require('../Helpers/filterNumber');
+const filterNum = require('../Helpers/FilterNumber');
 
 const PnlMonthlyConstant = () => {
     const [formFields, setFormFields] = useState([]);
@@ -11,10 +11,6 @@ const PnlMonthlyConstant = () => {
     useEffect(() => {
         fetchData();
     }, []);
-
-    useEffect(() => {
-        console.log('formFields==>', formFields);
-    }, [formFields]);
 
     const fetchData = async () => {
         try {
@@ -94,7 +90,7 @@ const PnlMonthlyConstant = () => {
             await new Promise((resolve) => {
                 setTimeout(() => {
                     resolve();
-                }, 100);
+                }, 40);
             });
             setRerender(true);
             console.log('Updated formFields', formFields);
@@ -110,7 +106,7 @@ const PnlMonthlyConstant = () => {
             <BreadCrumbs></BreadCrumbs>
             {rerender && (
                 <div
-                    className="border-2 p-4 w-[700px] mb-32"
+                    className="border-2 p-5 w-[700px] mb-32"
                     style={{
                         transform: 'translate(-50%)',
                         position: 'absolute',

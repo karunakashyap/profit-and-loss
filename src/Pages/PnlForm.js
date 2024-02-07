@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import SubFieldSection from '../Components/UI/Sections/SubFieldSection';
 import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
-const filterNum = require('../Helpers/filterNumber');
+import Loader from '../Components/UI/Loader/Loader';
+const filterNum = require('../Helpers/FilterNumber');
 
 const PnlForm = () => {
     const [formFields, setFormFields] = useState([]);
-    const [rerender, setRerender] = useState(true);
-
+    const [isLoading, setLoading] = useState(false);
     useEffect(() => {
         console.log('API Call Happening');
         fetchData();
@@ -65,10 +65,11 @@ const PnlForm = () => {
 
             for (let field of allFormFields) {
                 let formFieldElement = document.getElementById(field?.form_field_id);
-                console.log('field.data_type==>', field.data_type);
-                if (field.data_type?.toLowerCase() == 'number') {
+                if (field.data_type?.toLowerCase() === 'currency') {
                     field.value = parseInt(filterNum(formFieldElement.value));
-                } else if (field.data_type?.toLowerCase() == 'decimal') {
+                } else if (field.data_type?.toLowerCase() === 'number') {
+                    field.value = parseInt(filterNum(formFieldElement.value));
+                } else if (field.data_type?.toLowerCase() === 'decimal') {
                     field.value = parseFloat(filterNum(formFieldElement.value));
                 } else {
                     field.value = formFieldElement.value;
@@ -76,6 +77,7 @@ const PnlForm = () => {
                 postBody?.fields.push(field);
             }
 
+            setLoading(true);
             const response = await axios({
                 method: 'POST',
                 url: 'http://localhost:4000/pnl',
@@ -87,13 +89,7 @@ const PnlForm = () => {
                 crossDomain: true,
             });
             setFormFields((formFields) => [...response.data.data]);
-            setRerender(false);
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                    resolve();
-                }, 100);
-            });
-            setRerender(true);
+            setLoading(false);
             console.log('Updated formFields', formFields);
         } catch (error) {
             console.error('Error submitting data:', error);
@@ -102,30 +98,30 @@ const PnlForm = () => {
 
     if (!formFields) return null;
 
+    if (isLoading) return Loader;
+
     return (
         <div>
             <BreadCrumbs></BreadCrumbs>
-            {rerender && (
-                <div
-                    className="border-2 p-4 w-[700px] mb-32"
-                    style={{
-                        transform: 'translate(-50%)',
-                        position: 'absolute',
-                        left: '50%',
-                    }}
-                >
-                    {formFields.map((field, index) => {
-                        return (
-                            <SubFieldSection
-                                field={field}
-                                index={index}
-                                key={field.sequence + index}
-                                onFormFieldBlur={submitPnl}
-                            />
-                        );
-                    })}
-                </div>
-            )}
+            <div
+                className="border-2 p-5 w-[700px] mb-32"
+                style={{
+                    transform: 'translate(-50%)',
+                    position: 'absolute',
+                    left: '50%',
+                }}
+            >
+                {formFields.map((field, index) => {
+                    return (
+                        <SubFieldSection
+                            field={field}
+                            index={index}
+                            key={field.sequence + index}
+                            onFormFieldBlur={submitPnl}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };

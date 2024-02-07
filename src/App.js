@@ -13,13 +13,13 @@ function App() {
             <div>
                 <Navigation />
                 <Routes>
-                    <Route path="/design_guidelines" element={<DesignGuidelines/>} />
+                    <Route path="/design_guidelines" element={<DesignGuidelines />} />
                     <Route path="/pnl/2024/January" element={<PnlForm />} />
                     <Route
                         path="/monthly_constants/2024/January"
                         element={<PnlMonthlyConstant />}
                     />
-                    <Route path="/dashboard" element={<DashBoard/>} />
+                    <Route path="/dashboard" element={<DashBoard />} />
                 </Routes>
                 <Footer />
             </div>

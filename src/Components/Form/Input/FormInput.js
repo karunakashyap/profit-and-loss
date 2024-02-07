@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CurrencyInput from 'react-currency-input-field';
 import { ReactComponent as ExclamationCircle } from '../../../assets/Icons/ExclamationCircle.svg';
 
-const filterNum = require('../../../Helpers/filterNumber');
+const filterNum = require('../../../Helpers/FilterNumber');
 
 const FormInput = ({
     titleName,
@@ -26,25 +26,19 @@ const FormInput = ({
     };
 
     const checkSpecialChar = (e) => {
-        if (!/[0-9]/.test(e.key)) {
+        if (/\W/.test(e.key)) {
             e.preventDefault();
         }
     };
 
-    console.log('Title Name==>', titleName);
-    console.log('value==>', value);
-    console.log('type==>', type);
-    console.log('numericValue==>', numericValue);
-
     return (
         <div className="p-2">
             <form action="">
-                {/* grid grid-cols-2 */}
                 <div className=" flex mt-1">
                     <div className="w-[200px]">
                         <div className="flex space-x-1 mt-1">
                             <label
-                                htmlFor={`${formFieldId}_IN_CURRENCY_FORMAT`}
+                                htmlFor={formFieldId}
                                 className={`text-gray-400 mb-2`}
                                 style={{ fontSize: fontSize }}
                             >

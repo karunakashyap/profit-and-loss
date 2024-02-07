@@ -110,7 +110,6 @@ const DesignGuidelines = () => {
                 <div>
                     <NoDataFound />
                 </div>
-                
             </div>
         </>
     );
