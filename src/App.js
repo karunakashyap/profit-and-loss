@@ -6,6 +6,7 @@ import React from '@heroicons/react';
 import PnlMonthlyConstant from './Pages/PnlMonthlyConstant';
 import DesignGuidelines from './Pages/DesignGuidelines';
 import DashBoard from './Pages/DashBoard';
+import AllData from './Pages/AllData';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                         element={<PnlMonthlyConstant />}
                     />
                     <Route path="/dashboard" element={<DashBoard/>} />
+                    <Route path="/pnl/all_data" element={<AllData/>} />
                 </Routes>
                 <Footer />
             </div>

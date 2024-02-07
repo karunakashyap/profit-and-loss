@@ -2,6 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
+        <div className=' mt-36'>
         <footer
             className="bg-gray-800 text-white h-20 fixed inset-x-0 bottom-0"
             style={{
@@ -15,6 +16,7 @@ const Footer = () => {
                 <div className=" float-end  relative -mt-6 mr-32 ">Built with 🔥 by Mutant(X)</div>
             </div>
         </footer>
+        </div>
     );
 };
 
