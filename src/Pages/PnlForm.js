@@ -7,7 +7,7 @@ const filterNum = require('../Helpers/FilterNumber');
 
 const PnlForm = () => {
     const [formFields, setFormFields] = useState([]);
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setLoading] = useState(false);
     const [focusOnNextElementId, setFocussedElementId] = useState(null)
 
     useEffect(() => {
