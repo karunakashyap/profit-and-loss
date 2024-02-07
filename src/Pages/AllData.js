@@ -17,13 +17,21 @@ const AllData = () => {
         'MARCH',
     ];
     return (
-        <div className="p-10">
-            <div className="h-[900px] overflow-scroll p-0">
-                <div className="row flex  ">
-                    <div className="column1 border-2 w-44 p-2"></div>
+        <div className="p-10 mb-12">
+            <div
+                className="overflow-scroll border-2"
+                style={{
+                    width: '100%',
+                    overflowX: 'scroll',
+                    overflowY: 'scroll',
+                    whiteSpace: 'nowrap',
+                }}
+            >
+                <div className="row w-full flex">
+                    <div className="column1 border-b-2 min-w-44 p-2"></div>
                     <div className="flex">
                         {monthName.map((month) => (
-                            <div className="column2 border-2 w-28 p-2 font-bold text-center">
+                            <div className="column2 border-l-2 border-b-2 min-w-28 p-2 font-bold text-center">
                                 {month}
                             </div>
                         ))}

@@ -146,7 +146,7 @@ const DashBoard = () => {
                     </div>
                 </div>
                 <div className="w-full border-t-0 border-x-4 border-b-4 p-5 h-16 flex font-bold space-x-20">
-                    <h1 className='float-right'>TOTAL REVENUE INR 20,000</h1>
+                    <h1 className="float-right">TOTAL REVENUE INR 20,000</h1>
                 </div>
             </div>
         </div>
