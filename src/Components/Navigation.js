@@ -4,18 +4,17 @@ import Logo from './../assets/Pngs/Logo.png';
 // style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)" }}
 
 const navigation = [
-    { name: 'Overview', href: '#', current: true },
-    { name: 'Branches', href: '#', current: false },
-    { name: 'Employees', href: '#', current: false },
-    { name: 'Payout Structures', href: '#', current: false },
-    { name: 'Calculator Templates', href: '#', current: false },
+    { name: 'Dashboard', href: '/dashboard', current: true },
+    { name: 'All Data', href: '/all-data', current: false },
+    { name: 'Monthly Data', href: '/monthly-data', current: false },
+    { name: 'Monthly Constants', href: '/monthly-constants', current: false },
 ];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function Navigation() {
     return (
         <Disclosure
             as="nav"

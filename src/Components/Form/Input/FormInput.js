@@ -17,7 +17,6 @@ const FormInput = ({
     const [numericValue, setNumericValue] = useState(value);
 
     const handleChange = (event) => {
-        console.log('onValueChange fired', event.target.value);
         if (event.target.value === undefined) {
             setNumericValue(0);
         } else {
@@ -26,25 +25,19 @@ const FormInput = ({
     };
 
     const checkSpecialChar = (e) => {
-        if (!/[0-9]/.test(e.key)) {
+        if (/\W/.test(e.key)) {
             e.preventDefault();
         }
     };
 
-    console.log('Title Name==>', titleName);
-    console.log('value==>', value);
-    console.log('type==>', type);
-    console.log('numericValue==>', numericValue);
-
     return (
         <div className="p-2">
             <form action="">
-                {/* grid grid-cols-2 */}
                 <div className=" flex mt-1">
                     <div className="w-[200px]">
                         <div className="flex space-x-1 mt-1">
                             <label
-                                htmlFor={`${formFieldId}_IN_CURRENCY_FORMAT`}
+                                htmlFor={formFieldId}
                                 className={`text-gray-400 mb-2`}
                                 style={{ fontSize: fontSize }}
                             >
@@ -61,7 +54,7 @@ const FormInput = ({
                                     value={numericValue}
                                     prefix="₹ "
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     onChange={handleChange}
                                     step={type !== 'decimal' ? '1' : '.2'}
                                     disabled={
@@ -81,7 +74,7 @@ const FormInput = ({
                                     allowDecimals
                                     value={numericValue}
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     onChange={handleChange}
                                     disabled={
                                         source === 'MONTHLY_CONSTANT' && monthlyConstantEnable
@@ -100,7 +93,7 @@ const FormInput = ({
                                     allowDecimals
                                     value={numericValue}
                                     name={`${formFieldId}_${titleName}`}
-                                    id={formFieldId}
+                                    id={`formfield_${formFieldId}`}
                                     decimalsLimit={2}
                                     fixedDecimalLength={2}
                                     decimalScale={2}

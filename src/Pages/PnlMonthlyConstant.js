@@ -2,19 +2,35 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import SubFieldSection from '../Components/UI/Sections/SubFieldSection';
 import BreadCrumbs from '../Components/UI/BreadCrumbs/BreadCrumbs';
+import Loader from '../Components/UI/Loader/Loader';
 const filterNum = require('../Helpers/filterNumber');
 
 const PnlMonthlyConstant = () => {
     const [formFields, setFormFields] = useState([]);
-    const [rerender, setRerender] = useState(true);
+    const [isLoading, setLoading] = useState(false);
+    const [focusOnNextElementId, setFocussedElementId] = useState(null)
 
     useEffect(() => {
         fetchData();
     }, []);
 
     useEffect(() => {
-        console.log('formFields==>', formFields);
-    }, [formFields]);
+        if (focusOnNextElementId) {
+            const formFieldElements = document.querySelectorAll('[id^="formfield_"]');
+            let catchNext = false;
+            for (const formFieldElement of formFieldElements) {
+                if (catchNext) {
+                    console.log(formFieldElement);
+                    formFieldElement.focus();
+                    formFieldElement.scrollIntoView({ behavior: 'smooth' });
+                    break;
+                }
+                if (formFieldElement?.id === focusOnNextElementId) {
+                    catchNext = true;
+                }
+            }
+        }
+    }, [focusOnNextElementId]);
 
     const fetchData = async () => {
         try {
@@ -56,6 +72,8 @@ const PnlMonthlyConstant = () => {
 
     const submitPnlMonthlyConstants = async (event) => {
         try {
+            const formFieldId = event.currentTarget.id;
+            setFocussedElementId(null);
             const postBody = {
                 year,
                 month,
@@ -64,7 +82,7 @@ const PnlMonthlyConstant = () => {
             };
 
             for (let field of allFormFields) {
-                let formFieldElement = document.getElementById(field?.form_field_id);
+                let formFieldElement = document.getElementById("formfield_" + field?.form_field_id);
                 if (field.data_type?.toLowerCase() === 'currency') {
                     field.value = parseInt(filterNum(formFieldElement.value));
                 } else if (field.data_type?.toLowerCase() === 'number') {
@@ -79,6 +97,7 @@ const PnlMonthlyConstant = () => {
 
             console.log('postBody==>', JSON.stringify(postBody));
 
+            setLoading(true);
             const response = await axios({
                 method: 'POST',
                 url: 'http://localhost:4000/pnl/monthly-constants',
@@ -90,13 +109,8 @@ const PnlMonthlyConstant = () => {
                 crossDomain: true,
             });
             setFormFields([...response.data.data]);
-            setRerender(false);
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                    resolve();
-                }, 100);
-            });
-            setRerender(true);
+            setLoading(false);
+            setFocussedElementId(formFieldId);
             console.log('Updated formFields', formFields);
         } catch (error) {
             console.error('Error submitting data:', error);
@@ -105,31 +119,33 @@ const PnlMonthlyConstant = () => {
 
     if (!formFields) return null;
 
+    if (isLoading) return (
+        <Loader/>
+    );
+
     return (
         <div>
             <BreadCrumbs></BreadCrumbs>
-            {rerender && (
-                <div
-                    className="border-2 p-4 w-[700px] mb-32"
-                    style={{
-                        transform: 'translate(-50%)',
-                        position: 'absolute',
-                        left: '50%',
-                    }}
-                >
-                    {formFields.map((field, index) => {
-                        return (
-                            <SubFieldSection
-                                field={field}
-                                index={index}
-                                key={field.sequence + index}
-                                onFormFieldBlur={submitPnlMonthlyConstants}
-                                monthlyConstantEnable={true}
-                            />
-                        );
-                    })}
-                </div>
-            )}
+            <div
+                className="border-2 p-5 w-[700px] mb-32"
+                style={{
+                    transform: 'translate(-50%)',
+                    position: 'absolute',
+                    left: '50%',
+                }}
+            >
+                {formFields.map((field, index) => {
+                    return (
+                        <SubFieldSection
+                            field={field}
+                            index={index}
+                            key={field.sequence + index}
+                            onFormFieldBlur={submitPnlMonthlyConstants}
+                            monthlyConstantEnable={true}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };

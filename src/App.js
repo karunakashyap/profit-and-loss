@@ -14,14 +14,14 @@ function App() {
             <div>
                 <Navigation />
                 <Routes>
-                    <Route path="/design_guidelines" element={<DesignGuidelines/>} />
+                    <Route path="/design_guidelines" element={<DesignGuidelines />} />
                     <Route path="/pnl/2024/January" element={<PnlForm />} />
-                    <Route
+                    {/* <Route
                         path="/monthly_constants/2024/January"
                         element={<PnlMonthlyConstant />}
-                    />
-                    <Route path="/dashboard" element={<DashBoard/>} />
-                    <Route path="/pnl/all_data" element={<AllData/>} />
+                    /> */}
+                    <Route path="/dashboard" element={<DashBoard />} />
+                    <Route path="/all-data" element={<AllData />} />
                 </Routes>
                 <Footer />
             </div>
