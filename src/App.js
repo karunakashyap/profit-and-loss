@@ -7,6 +7,7 @@ import PnlMonthlyConstant from './Pages/PnlMonthlyConstant';
 import DesignGuidelines from './Pages/DesignGuidelines';
 import DashBoard from './Pages/DashBoard';
 import AllData from './Pages/AllData';
+import MonthlyData from './Pages/MonthlyData';
 
 function App() {
     return (
@@ -16,12 +17,14 @@ function App() {
                 <Routes>
                     <Route path="/design_guidelines" element={<DesignGuidelines />} />
                     <Route path="/pnl/2024/January" element={<PnlForm />} />
-                    {/* <Route
+                    <Route
                         path="/monthly_constants/2024/January"
                         element={<PnlMonthlyConstant />}
-                    /> */}
+                    />
                     <Route path="/dashboard" element={<DashBoard />} />
                     <Route path="/all-data" element={<AllData />} />
+                    <Route path="/monthly-data" element={<MonthlyData />} />
+
                 </Routes>
                 <Footer />
             </div>
