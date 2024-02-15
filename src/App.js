@@ -16,7 +16,7 @@ function App() {
                 <Navigation />
                 <Routes>
                     <Route path="/design_guidelines" element={<DesignGuidelines />} />
-                    <Route path="/pnl/2024/January" element={<PnlForm />} />
+                    <Route path="/pnl/:2024/:January" element={<PnlForm />} />
                     <Route
                         path="/monthly_constants/2024/January"
                         element={<PnlMonthlyConstant />}

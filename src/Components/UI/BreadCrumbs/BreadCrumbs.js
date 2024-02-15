@@ -5,33 +5,34 @@ import { ReactComponent as ChevronRight } from '../../../assets/Icons/ChevronRig
 const Breadcrumbs = () => {
     const location = useLocation();
     const capitalize = (string) => (string ? string.charAt(0).toUpperCase() + string.slice(1) : '');
-    const currentUrl = location.pathname
-        .split('/')
-        .map((el) => capitalize(el))
-        .filter((x) => x);
+    const currentUrlSegments = location.pathname.split('/').filter(Boolean); 
+    const breadcrumbs = [{ label: 'Overview', path: '/' }];
+    currentUrlSegments.reduce((accumulatedPath, segment) => {
+        const nextPath = `${accumulatedPath}/${segment}`;
+        breadcrumbs.push({ label: capitalize(segment), path: nextPath });
+        return nextPath;
+    }, '');
+
     return (
         <div className="flex text-gray-500 text-lg p-5">
-            <Link to="/">Overview</Link>
-            {currentUrl.map((pathname, index) => {
-                // console.log(`/${currentUrl.slice(0, index + 1)}`);
-                const routeTo = `/${currentUrl.slice(0, index + 1).join('/')}`;
-                const isLast = index === currentUrl.length - 1;
-                return (
-                    <div key={pathname}>
-                        <div className=" flex">
-                            <div className=" mt-1">
-                                {' '}
+            {breadcrumbs.map(({ label, path }, index) => (
+                <div key={path}>
+                    <div className="flex items-center">
+                        {index !== 0 && (
+                            <div className="mt-1">
                                 <ChevronRight />
                             </div>
-                            {isLast ? (
-                                <div className=" ">{pathname}</div>
+                        )}
+                        <div className={index === breadcrumbs.length - 1 ? '' : 'mr-2'}>
+                            {index === breadcrumbs.length - 1 ? (
+                                <span>{label}</span>
                             ) : (
-                                <Link to={routeTo}>{pathname}</Link>
+                                <Link to={path}>{label}</Link>
                             )}
                         </div>
                     </div>
-                );
-            })}
+                </div>
+            ))}
         </div>
     );
 };
