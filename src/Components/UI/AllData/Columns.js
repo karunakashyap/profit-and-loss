@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useState} from 'react';
 import TableData from '../../../assets/Jsons/TableData.json';
 const Columns = ({ Data, font }) => {
+    
     return (
         <div>
             {Data?.map((title) => {
@@ -8,9 +9,9 @@ const Columns = ({ Data, font }) => {
                     <div className={`${font}`}>
                         {title.title && (
                             <h1 className={`border-b-2 text-wrap text-center font-bold`}
-                            style={{
-                                "width": "95rem"
-                            }}>
+                                style={{
+                                    "width": "95rem"
+                                }}>
                                 {title.title}
                             </h1>
                         )}
@@ -33,8 +34,8 @@ const Columns = ({ Data, font }) => {
                                 {TableData.column_data.map((item) =>
                                     item.form_field_id === title.form_field_id
                                         ? item.data.map((v) => (
-                                              <div className="border-b-2 border-l-2 w-28 p-2">{v.value}</div>
-                                          ))
+                                            <div className="border-b-2 border-l-2 w-28 p-2">{v.value}</div>
+                                        ))
                                         : ''
                                 )}
                             </div>

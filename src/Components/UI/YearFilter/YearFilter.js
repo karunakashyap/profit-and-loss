@@ -35,7 +35,7 @@ const YearFilter = () => {
                 type="checkbox"
                 id={option.id}
                 value={option.id}
-                checked={selectedOptions.includes(option.id)}
+                checked={selectedOptions.includes(option.label)}
                 onChange={() => handleCheckboxChange(option.label)}
                 className='float-end mt-2 p-4'
               />
