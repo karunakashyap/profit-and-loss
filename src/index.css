@@ -1,0 +1,11 @@
+@import './assets/Styles/Main.css';
+.font-size {
+    font-size: 16px;
+}
+.font-color {
+    color: red;
+}
+body {
+    margin: 0;
+    padding: 0;
+}

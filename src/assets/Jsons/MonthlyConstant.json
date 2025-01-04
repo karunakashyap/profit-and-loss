@@ -1,0 +1,1487 @@
+[
+    {
+        "title": "VEHICLE",
+        "sequence": 1,
+        "sub_fields": [
+            {
+                "title": "H'ness CB350 DLX",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "sequence": 1,
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "H'ness CB350 DLX 2",
+                "sequence": 2,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "H'ness CB350 DLX 3",
+                "sequence": 3,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB350 RS Dualtone",
+                "sequence": 4,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB350 RS Monotone",
+                "sequence": 5,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB350 RS SAB",
+                "sequence": 6,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB300F DLX",
+                "sequence": 7,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB300R",
+                "sequence": 8,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "CB300F DLX PRO",
+                "sequence": 9,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Ex-showroom Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 245000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "RTO",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 4500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Insurance",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 2500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Other",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 6500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Price",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 15000,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Percentage",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0.08,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "On-Road Price",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 258500,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Sales Volume",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 4,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Profit",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 60000,
+                        "is_other": false
+                    }
+                ]
+            }
+        ],
+        "form_fields": [
+            {
+                "element_name": "Total Vehicle Sales",
+                "data_type": "number",
+                "source": "calculated",
+                "value": 0,
+                "is_other": false
+            }
+        ]
+    },
+    {
+        "title": "Merchandise and Accessories",
+        "sequence": 1,
+        "sub_fields": [
+            {
+                "title": "Merchandise",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Average Margin(%)",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Revenue",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "Accessories",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Average Margin(%)",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Revenue",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            }
+        ],
+        "form_fields": []
+    },
+    {
+        "title": "Other Income",
+        "sequence": 1,
+        "sub_fields": [],
+        "form_fields": [
+            {
+                "element_name": "Total Finance payout income",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Insurance Payout",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Extended warranty payout",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Annual Maintainence contract(AMC)",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Scrap sale",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Exchange bikes commission",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "RSA",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Labour",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Other Income",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            }
+        ]
+    },
+    {
+        "title": "Income from service",
+        "sequence": 1,
+        "sub_fields": [
+            {
+                "title": "Free services",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "No of Services",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Per unit",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "Paid services",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "No of Services",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin Per unit",
+                        "data_type": "number",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Total Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            }
+        ],
+        "form_fields": []
+    },
+    {
+        "title": "Income from Spare and other",
+        "sequence": 1,
+        "sub_fields": [
+            {
+                "title": "Parts Sales",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Revenue",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Average Margin(%)",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "Optional Parts Sales",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Revenue",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Average Margin(%)",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            },
+            {
+                "title": "Oil/Lubricant Sale",
+                "sequence": 1,
+                "sub_fields": [],
+                "form_fields": [
+                    {
+                        "element_name": "Revenue",
+                        "data_type": "number",
+                        "source": "input",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Average Margin(%)",
+                        "data_type": "decimal",
+                        "source": "monthly_constant",
+                        "value": 0,
+                        "is_other": false
+                    },
+                    {
+                        "element_name": "Margin",
+                        "data_type": "number",
+                        "source": "calculated",
+                        "value": 0,
+                        "is_other": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Rent",
+        "sequence": 1,
+        "sub_fields": [],
+        "form_fields": [
+            {
+                "element_name": "Showroom",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Workshop Area (Repair+PDI+service parking)",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            },
+            {
+                "element_name": "Warehouse",
+                "data_type": "number",
+                "source": "input",
+                "value": 0,
+                "is_other": false
+            }
+        ]
+    },
+    {
+        "title": "Staff salary",
+        "sequence": 1,
+        "sub_fields": [
+            {
+                "title": "Showroom",
+                "sequence": 1,
+                "sub_fields": [
+                    {
+                        "title": "Director",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "General Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Sales Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Relationship Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Junior Sales Executive & Front Desk",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Sr Sales Executive & IND Reception",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "HiRISE Operator",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Accountant/Cashier",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "House Keeping/ PDI/ RTO",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Admin (incl. KRP Accounts & Backend)",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    }
+                ],
+                "form_fields": []
+            },
+            {
+                "title": "Workshop",
+                "sequence": 1,
+                "sub_fields": [
+                    {
+                        "title": "Service Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reception",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Senior Technician",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Technician",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Parts Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Floor Manager",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Parts Executive",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    },
+                    {
+                        "title": "House Keeping / Security",
+                        "sequence": 1,
+                        "sub_fields": [],
+                        "form_fields": [
+                            {
+                                "element_name": "No. of employees",
+                                "data_type": "number",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Monthly Salary",
+                                "data_type": "decimal",
+                                "source": "input",
+                                "value": 0,
+                                "is_other": false
+                            },
+                            {
+                                "element_name": "Total Salary",
+                                "data_type": "number",
+                                "source": "calculated",
+                                "value": 0,
+                                "is_other": false
+                            }
+                        ]
+                    }
+                ],
+                "form_fields": []
+            }
+        ],
+        "form_fields": []
+    }
+]
