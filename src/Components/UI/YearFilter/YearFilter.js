@@ -23,7 +23,7 @@ const YearFilter = () => {
   return (
     <div>
       <div onClick={toggleDropdown}>
-        <input type='text' value={selectedOptions.join(',')} className='border-2 p-2 rounded'></input>
+        <input type='number' value={selectedOptions.join(',')} className='border-2 p-2 rounded'></input>
       </div>
       {showDropdown && (
 
